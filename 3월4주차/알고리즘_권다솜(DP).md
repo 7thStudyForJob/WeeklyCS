@@ -8,7 +8,7 @@
 
    **[프로그래머스 정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)**
 
-​	<img src="DP.assets/image-20230320152908783.png" alt="image-20230320152908783" style="zoom:33%;" />
+​	<img src="알고리즘_권다솜(DP).assets/image-20230320152908783.png" alt="image-20230320152908783" style="zoom:33%;" />
 
 3. DP의 목적
 
@@ -63,7 +63,7 @@
 
    : 재귀는 함수 내에서 자기 자신을 반복하는 호출이고 반복은 참인 경우 계속하여 반복되는 명령어 블록입니다. DP는 작은 문제의 해를 여러 메모리에 저장해두기 때문에 동일한 계산의 반복을 줄일 수 있어 속도가 빠르다는 장점이 있습니다.
 
-   ![image-20230320161714249](DP.assets/image-20230320161714249.png)
+   ![image-20230320161714249](알고리즘_권다솜(DP).assets/image-20230320161714249.png)
 
    
 
