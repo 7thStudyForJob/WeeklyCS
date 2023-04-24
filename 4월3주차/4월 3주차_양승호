@@ -1,0 +1,100 @@
+**시스템 버스**  
+- 컴퓨터의 구성요소를 서로 연결하고 데이터 전달을 위한 경로
+- 주소 버스, 데이터 버스, 제어 버스로 구성
+
+**1 ) 주소 버스**
+- 메모리의 주소나 I/O유닛의 포트 번호를 전달
+- CPU와 Memory는 단방향으로 데이터 전달이 가능한 버스를 이용함으로서 주소 전달은 CPU 에서메모리로만 가능
+- CPU, Memory는 I/O Unit과 양방향으로 데이터 전달이 가능한 버스를 사용
+ 
+
+**2 ) 데이터 버스(Data Bus)**
+
+- 데이터 전달
+
+- 각 구성요소(CPU, Memory, I/O Unit)는 양방향으로 데이터 전달이 가능한 버스를 사용 
+
+ 
+
+**3 ) 제어 버스(Control Bus)**
+
+- 제어 신호 전달
+
+- Read와 Write신호가 전달
+
+- 각 구성요소(CPU, Memory, I/O Unit)는 양방향으로 데이터 전달이 가능한 버스를 사용 
+
+![title](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FxmVLL%2FbtqFElQFe4F%2F4bgtPArnBZ6dykKE4xwGy1%2Fimg.png)   
+
+
+
+**컴퓨터 구성 요소간 통신**  
+#### 1. CPU <----> 메모리
+
+- 적재와 저장 명령에 의해 수행
+
+ 
+
+1-1 적재
+
+- 주소 버스 : 메모리에서 불러올 데이터가 저장된 주소값이 전달(CPU -> Memory)
+
+- 신호 버스 : Memory Read 신호 전달(CPU -> Memory)
+
+- 데이터 버스 : 지정한 메모리에 저장된 값 전달(Memory -> CPU)
+
+ 
+
+1-2 저장
+
+- 주소 버스 : 메모리에서 해당 데이터를 저장할 주소값 전달(CPU -> Memory)
+
+- 신호 버스 : Memory Write 신호 전달(CPU -> Memory)
+
+- 데이터 버스 : 저장할 데이터 전달(CPU -> Memory)
+
+ 
+
+#### 2) CPU <----> I/O Unit
+
+- 입력(Input)과 출력(Output)명령에 의해 수행
+
+ 
+
+2-1 입력
+
+- 주소 버스 : 해당 입출력 장치의 포트 번호 전달(CPU -> I/O Unit)
+
+- 신호 버스 : I/O Read(input) 신호 전달(CPU -> I/O Unit)
+
+- 데이터 버스 : 해당 입출력 장치는 데이터 전달(I/O Unit -> CPU)
+
+ 
+
+2-2 출력
+
+- 주소 버스 : 해당 입출력 장치의 포트 번호 전달(CPU -> I/O Unit)
+
+- 신호 버스 : I/O Write(output) 신호 전달(CPU -> I/O Unit)
+
+- 데이터 버스 : 입출력 장치에 데이터 전달(CPU -> I/O Unit)
+
+ 
+
+2-3 인터럽트
+
+- 입출력장치는 제어신호를 통해 인터럽트 요청을 보내 CPU에 입출력작업을 요청할 수 있음
+
+- 인터럽트 요청 : 입출력 준비를 마친 I/O Unit이 CPU에 입출력작업의 시작 요청
+
+- 인터럽트 확인 : CPU가 입추력 동작을 수행할 것을 입출력장치에 통보
+
+ 
+
+#### 3) 메모리 <----> I/O Unit
+
+- 입출력장치와 메모리의 통신은 CPU를 이용하지 않고 직접 기억장치 액세스 방식(DMA, Direct Memory Access)으로 통신
+
+- DMA 제어기는 CPU를 대신해 주소 버스와 제어버스에 신호를 전달
+
+- DMA 제어기는 통신 시작 전 CPU에 버스 사용해 대한 허가를 받아야함
